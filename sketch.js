@@ -42,7 +42,7 @@ function draw() {
 
     
     if(block1.isTouching(ball) && ball.bounceOff(block1)){
-        ball.shapeColor = "black";
+        ball.shapeColor = "yellow";
         music.play();
         ball.bounceOff(block1);
     }
@@ -51,12 +51,16 @@ function draw() {
         ball.shapeColor = "red";
         music.play();
         ball.bounceOff(block2);
+        ball.velocityX=0;
+        ball.velocityY=0;   
     }
 
     if(block3.isTouching(ball) && ball.bounceOff(block3)){
-        ball.shapeColor = "yellow";
+        ball.shapeColor = "black";
         music.play();
         ball.bounceOff(block3);
+        //ball.x=10;
+        //ball.y=10;
     }
  
     if(block4.isTouching(ball) && ball.bounceOff(block4)){
@@ -64,7 +68,7 @@ function draw() {
         music.play();
         ball.bounceOff(block4);
     }
-
+    
 
     //add condition to check if box touching surface and make it box
     drawSprites();
